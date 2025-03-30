@@ -29,3 +29,4 @@ Temporary Items
 .env
 venv
 __pycache__
+db.sqlite

@@ -48,7 +48,14 @@ def sink_generate_slug():
     return()
 
 
-def sink_list_all():
-
-    return()
+def sink_list_all(sink_url, sink_token, limit=None):
+    endpoint_url = 'link/list'
+    if not limit is None: endpoint_url += '?limit=' + str(limit)
+    headers = {
+        "Content-Type": "application/json",
+        'Authorization': 'Bearer ' + sink_token
+    }
+    response = requests.get(sink_url+endpoint_url, headers=headers)
+    # TODO - Add error processing
+    return(response.json())
     
