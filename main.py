@@ -15,9 +15,9 @@ from dotenv import load_dotenv
 ## Set up client and log into Discord
 # Set Up ENV Variables
 load_dotenv()
-token = os.getenv('TOKEN')
-sink_token = os.getenv('SINK_TOKEN')
-sink_url = os.getenv('SINK_API_URL')
+token = os.environ['TOKEN']
+sink_token = os.environ['SINK_TOKEN']
+sink_url = os.environ['SINK_API_URL']
 
 
 intents = discord.Intents.default()
