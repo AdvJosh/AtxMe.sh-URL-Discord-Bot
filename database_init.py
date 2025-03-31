@@ -12,7 +12,7 @@ Create Banned Table
 CREATE TABLE "banned_users" (
 	"ID"	INTEGER NOT NULL UNIQUE,
 	"discordID"	INTEGER NOT NULL,
-	"BannedBy"	TEXT NOT NULL,
+	"BannedBy"	INTEGER NOT NULL,
 	"BannedReason"	TEXT,
 	PRIMARY KEY("ID" AUTOINCREMENT)
 );
